@@ -1,0 +1,303 @@
+/* 
+
+rgba(202,95,69,255)
+rgba(121,45,32,255)
+rgba(237,211,196,255)
+rgba(209,175,166,255)
+*/
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 228, 196);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    width: 100%;
+}
+
+.table-h5{
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav{
+    display: flex;
+    background-color: rgba(255, 228, 196, 1);
+    position: fixed;
+    width: 100%;
+    
+    font-size: 25px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    
+}
+.icono{
+    
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    background-color: rgba(255, 228, 196, 1);
+}
+.icono h5{
+    display: inline-block;
+    margin: 10px;
+}
+.icono img{
+    width: 60px;
+    margin-left: 10px;
+}
+
+.table-img{
+    width: 60px;
+}
+
+.opciones{
+    flex-grow: 4;
+}
+ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style:none;
+    
+}
+li{
+    padding: 0 35px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.encabezado{
+    background-image: url("https://fondosmil.com/fondo/70684.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    
+}
+
+.logo{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.titulo{
+    text-align: center;
+    background-color: rgba(255, 228, 196, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contenedor-index{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.descripcion{
+    width: 20%;
+    text-align: center;
+    min-width: 310px;
+    padding: 50px 10px;
+}
+.descripcion img{
+    width: 300px;
+}
+.cuerpo{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.postre{
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 ;
+}
+.postre  img{
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(6, 6, 6, 0.3) ;
+    transition: 0.5s ease;
+
+}
+.b-medio{
+    position: absolute;
+    padding: 15px;
+    background-color:  rgba(255, 228, 196, 1);
+    opacity: 0;
+    border: solid 1px black;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    
+}
+.postre:hover .b-medio{
+    opacity: 1;
+    
+}
+
+.postre:hover img{
+    opacity: 0.3;
+    width: 210px;
+}
+.footer-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgb(250, 235, 215);
+    width: 100%;
+}
+
+.footer-item h3{
+    width: 100%;
+    padding-top: 15px;
+}
+.footer-item h5{
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.enlaces{
+    min-width: 100px;
+    padding: 10px;
+}
+
+a img{
+    width: 50px;
+}
+.form-data{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+.alineacion{
+    padding-top: 90px;
+}
+.ul-oculto{
+    top: -150px;
+}
+
+.bars{
+    display: none;
+}
+.contenedor_form{
+    
+}
+input{
+    display: block;
+}
+textarea{
+    display: block;
+}
+.table{
+    padding:20px 0;
+    text-align: center;
+}
+
+.table-boton{
+    border: none;
+    background-color: cadetblue;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    height: 23px;
+}               
+
+.form-nuevo{
+    position: fixed;
+    background-color: aqua;
+    transition: all 1s; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 450px;
+    align-items: center;
+    padding-top:30px ;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+
+.form-oculto{
+    display: none;
+}
+
+
+@media(max-width: 1001px){
+
+
+    .form-data{
+        flex-direction: column;
+    }
+    .contenedor{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .cuerpo{
+        width:100%;
+    }
+    nav{
+        flex-direction: column;
+        background-color: rgba(255, 228, 196, 1) ;
+        height: 60px;
+        transition: top 1s;  
+    }
+
+    ul{
+        flex-direction: column;
+        position: relative;
+        top: 0 ;
+        background-color:rgba(255, 228, 196, 1) ;
+        width: 100%;
+        transition: all 1s;       
+        text-align: center;
+        z-index: 1;
+    }
+    .bars{
+        display: block;
+    }
+    .icono{
+        position: relative;
+        z-index: 10000;
+        padding: 0 10px;
+        width: 100%;
+        height: 60px;
+    }
+    
+    
+    
+    
+
+}
+

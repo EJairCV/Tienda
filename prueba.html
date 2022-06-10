@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button class="btn" valor="1" value="1" >boton2</button>
+    <button class="btn" valor="2" value="2" >boton2</button>
+    <button class="btn" valor="3" value="3" >boton2</button>
+    <button class="btn" valor="4" value="4" >boton2</button>
+    <button class="btn" valor="5" value="5" >boton2</button>
+
+    <input type="checkbox" class="check">
+    <input type="checkbox" class="check">
+    <input type="checkbox" class="check">
+
+    <input type="text" name="prueba1" id="input1">
+    <input type="text" name="prueba1" id="input2">
+    <form action="" id="form">
+        <input type="hidden" name="array" id="array">
+    </form>
+
+</body>
+<script>
+
+    const form = document.getElementById("form");
+    
+    const formdata= new FormData(form);
+
+    const array = [5, 5 ];
+    const numero = 5;
+    formdata.set("array", array);
+    console.log(formdata.get("array"));
+    console.log(typeof(formdata.get("array")));
+
+
+    const cbox = document.querySelectorAll(".check");
+    const desabilitar = ()=>{
+        cbox.forEach(cb =>{
+        cb.disabled= true;
+    })
+    }
+    
+    //prueba exprecion regular
+
+    const expreciones = {
+        nombre: /^[a-zA-Z0-9]{4,16}$/
+    }
+
+    const inputTex=document.getElementById("input1");
+
+    inputTex.addEventListener("keyup", ()=>{
+        if (!expreciones.nombre.test(inputTex.value)) {
+            console.log("ta mal");
+        }else{
+            console.log("ta bien");
+        }
+    })
+
+
+
+
+
+    const btn = document.querySelectorAll(".btn");
+    console.log(btn);
+    // btn[0].addEventListener("click", ()=>{
+    //     console.log(btn[0].value);
+    // })
+    // btn[1].addEventListener("click", ()=>{
+    //     console.log(btn[1].value);
+    // })
+    // btn[2].addEventListener("click", ()=>{
+    //     console.log(btn[2].value);
+    // })
+    // btn[3].addEventListener("click", ()=>{
+    //     console.log(btn[3].value);
+    // })
+    // btn[4].addEventListener("click", ()=>{
+    //     console.log(btn[4].value);
+    // })
+
+        
+        btn.forEach(element => {
+           element.addEventListener("click",()=>{
+               console.log(element.value);
+           })
+        });
+
+
+
+    for(botones of btn){
+        
+        console.log(botones.value);
+        
+
+    }
+
+
+</script>
+</html>
